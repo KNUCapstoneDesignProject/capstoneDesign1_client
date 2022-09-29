@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
+    android:layout_height="100dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/item_border"
@@ -10,45 +10,10 @@
     android:layout_marginStart="4dp"
     android:layout_marginEnd="4dp">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/black"
-        app:layout_scrollFlags="scroll|enterAlways"
-        app:tabIconTint="@color/white"
-        app:tabIndicatorColor="@color/white"
-        app:tabSelectedTextColor="#B0FFFF"
-        app:tabTextColor="@color/white"
-        tools:ignore="MissingConstraints">
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/unFilteredList"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="전체"
-            android:icon="@drawable/myPage"/>
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/filteredList1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="북마크"
-            android:icon="@drawable/bookmarks"/>
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/filteredList2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:icon="@drawable/fin"
-            android:text="이미 만나본 펫시터"/>
-
-    </com.google.android.material.tabs.TabLayout>
-
     <ImageView
         android:id="@+id/petsitterPhotoImg"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:layout_marginBottom="4dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
@@ -66,26 +31,40 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/petsitterPhotoImg"
         app:layout_constraintTop_toTopOf="@+id/petsitterPhotoImg"
-        tools:text="Breed"/>
+        tools:text="Name"/>
 
     <TextView
         android:id="@+id/petsitterCareerTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:textSize="13sp"
+        app:layout_constraintTop_toTopOf="@+id/petsitterNameTV"
         app:layout_constraintBottom_toBottomOf="@+id/petsitterPhotoImg"
         app:layout_constraintStart_toStartOf="@+id/petsitterNameTV"
-        tools:text="Age" />
+        tools:text="career" />
+
+    <TextView
+        android:id="@+id/petsitterSpecialTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        app:layout_constraintTop_toTopOf="@+id/petsitterCareerTV"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/petsitterCareerTV"
+        tools:text="special" />
 
     <TextView
         android:id="@+id/petsitterPriceTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="195dp"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/petsitterCareerTV"
-        app:layout_constraintStart_toEndOf="@+id/petsitterCareerTV"
-        app:layout_constraintTop_toTopOf="@+id/petsitterCareerTV"
-        tools:text="Gender" />
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toTopOf="@+id/petsitterSpecialTV"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/petsitterSpecialTV"
+        tools:text="price" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

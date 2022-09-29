@@ -31,6 +31,7 @@ class petsitterRVAdapter (val context: Context, val petsitterList: ArrayList<pet
             val petsitterName = itemView?.findViewById<TextView>(R.id.petsitterNameTV)
             val petsitterCareer = itemView?.findViewById<TextView>(R.id.petsitterCareerTV)
             val petsitterPrice = itemView?.findViewById<TextView>(R.id.petsitterPriceTV)
+            val petsitterSpecial = itemView?.findViewById<TextView>(R.id.petsitterSpecialTV)
 
             fun bind (petsitter: petsitter, context: Context) {
                 /* dogPhoto의 setImageResource에 들어갈 이미지의 id를 파일명(String)으로 찾고,
@@ -45,6 +46,7 @@ class petsitterRVAdapter (val context: Context, val petsitterList: ArrayList<pet
                 petsitterName?.text = petsitter.name
                 petsitterCareer?.text = petsitter.career
                 petsitterPrice?.text = petsitter.price
+                petsitterSpecial?.text = petsitter.special.toString()
             }
         }
     }

@@ -13,11 +13,11 @@ class PetsitterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var petsitterList = arrayListOf<petsitter>(
-            petsitter("000", "3회 이상", "30,000원", "sample"),
-            petsitter("000", "3회 이상", "30,000원", "sample"),
-            petsitter("000", "3회 이상", "30,000원", "sample"),
-            petsitter("000", "3회 이상", "30,000원", "sample"),
-            petsitter("000", "3회 이상", "30,000원", "sample"),
+            petsitter("000", "3회 이상", "30,000원", "sample", "소형견 / 포메라니안 / 낯가림 전문"),
+            petsitter("000", "3회 이상", "30,000원", "sample", "소형견 / 포메라니안 / 낯가림 전문"),
+            petsitter("000", "3회 이상", "30,000원", "sample", "소형견 / 포메라니안 / 낯가림 전문"),
+            petsitter("000", "3회 이상", "30,000원", "sample", "소형견 / 포메라니안 / 낯가림 전문"),
+            petsitter("000", "3회 이상", "30,000원", "sample", "소형견 / 포메라니안 / 낯가림 전문"),
         )
 
         val mAdapter = petsitterRVAdapter(this, petsitterList)
