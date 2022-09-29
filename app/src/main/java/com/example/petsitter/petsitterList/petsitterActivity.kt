@@ -1,12 +1,13 @@
 package com.example.petsitter.petsitterList
-import kotlinx.android.synthetic.main.activity_main.*
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.petsitter.R
+import kotlinx.android.synthetic.main.activity_main.*
 
 class PetsitterActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,5 +26,6 @@ class PetsitterActivity : AppCompatActivity() {
         val lm = LinearLayoutManager(this)
         pRecyclerView.layoutManager = lm
         pRecyclerView.setHasFixedSize(true)
+
     }
 }
