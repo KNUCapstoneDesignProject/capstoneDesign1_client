@@ -88,11 +88,11 @@
             android:layout_marginLeft="50dp"
             android:layout_marginRight="112dp">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/signup_NickName"
+                android:id="@+id/signup_Name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFFFFF"
-                android:hint="닉네임"
+                android:hint="이름"
                 android:inputType="text">
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
@@ -124,9 +124,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                >
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/signup_Aniaml_Image"
+                    android:id="@+id/signup_Animal_Image"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:background="#FFFFFF"
@@ -147,11 +148,30 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="이름"
+                            android:inputType="text"
                             android:gravity="center"
                             android:layout_weight="8"
                             />
                         <EditText
-                            android:id="@+id/signup_Aniaml_name"
+                            android:id="@+id/signup_Animal_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="견종"
+                            android:inputType="text"
+                            android:gravity="center"
+                            android:layout_weight="8"
+                            />
+                        <EditText
+                            android:id="@+id/signup_Animal_Kind"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="2" />
@@ -167,32 +187,29 @@
                             android:gravity="center"
                             android:layout_weight="8"
                             />
-                        <EditText
-                            android:id="@+id/signup_Aniaml_Kind"
+                        <RadioGroup
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="2" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="견종"
-                            android:gravity="center"
-                            android:layout_weight="8"
-                            />
-                        <Spinner
-                            android:id="@+id/signup_Aniaml_Size"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginRight="60dp"
                             android:layout_weight="2"
-                            android:spinnerMode="dropdown"
-                            />
+                            android:id="@+id/signup_Animal_Size"
+                            android:orientation="horizontal"
+                            >
+                            <RadioButton
+                                android:id="@+id/signup_Animal_Sm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="소"/>
+                            <RadioButton
+                                android:id="@+id/signup_Animal_Mi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="중"/>
+                            <RadioButton
+                                android:id="@+id/signup_Animal_La"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="대"/>
+                        </RadioGroup>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -210,16 +227,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:id="@+id/signup_Aniaml_Sex"
+                            android:id="@+id/signup_Animal_Sex"
                             android:orientation="horizontal"
                             >
                             <RadioButton
-                                android:id="@+id/signup_Aniaml_M"
+                                android:id="@+id/signup_Animal_M"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="남"/>
                             <RadioButton
-                                android:id="@+id/signup_Aniaml_W"
+                                android:id="@+id/signup_Animal_W"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="여"/>
@@ -237,20 +254,15 @@
                             android:layout_weight="8"
                             />
                         <EditText
-                            android:id="@+id/signup_Aniaml_Age"
+                            android:id="@+id/signup_Animal_Age"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="2" />
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/signup_Add_Animal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="+"/>
+            </LinearLayout><!-- animal1 -->
             <LinearLayout
-                android:id="@+id/Animal02"
+                android:id="@+id/signup_Animal02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -261,7 +273,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/signup_Aniaml_Image2"
+                        android:id="@+id/signup_Animal_Image2"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:background="#FFFFFF"
@@ -286,7 +298,7 @@
                                 android:layout_weight="8"
                                 />
                             <EditText
-                                android:id="@+id/signup_Aniaml_name2"
+                                android:id="@+id/signup_Animal_name2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2" />
@@ -303,7 +315,7 @@
                                 android:layout_weight="8"
                                 />
                             <EditText
-                                android:id="@+id/signup_Aniaml_Kind2"
+                                android:id="@+id/signup_Animal_Kind2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2" />
@@ -320,7 +332,7 @@
                                 android:layout_weight="8"
                                 />
                             <Spinner
-                                android:id="@+id/signup_Aniaml_Size2"
+                                android:id="@+id/signup_Animal_Size2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -345,16 +357,16 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2"
-                                android:id="@+id/signup_Aniaml_Sex2"
+                                android:id="@+id/signup_Animal_Sex2"
                                 android:orientation="horizontal"
                                 >
                                 <RadioButton
-                                    android:id="@+id/signup_Aniaml_M2"
+                                    android:id="@+id/signup_Animal_M2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="남"/>
                                 <RadioButton
-                                    android:id="@+id/signup_Aniaml_W2"
+                                    android:id="@+id/signup_Animal_W2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="여"/>
@@ -372,14 +384,420 @@
                                 android:layout_weight="8"
                                 />
                             <EditText
-                                android:id="@+id/signup_Aniaml_Age2"
+                                android:id="@+id/signup_Animal_Age2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="2" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-    </LinearLayout>
+            </LinearLayout><!-- animal2 -->
+            <LinearLayout
+                android:id="@+id/signup_Animal03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/signup_Animal_Image3"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="#FFFFFF"
+                        android:text="+이미지"
+                        android:layout_weight="5"
+                        >
+                    </androidx.appcompat.widget.AppCompatButton>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="5">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="이름"
+                                android:gravity="center"
+                                android:layout_weight="8"
+                                />
+                            <EditText
+                                android:id="@+id/signup_Animal_name3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="견종"
+                                android:gravity="center"
+                                android:layout_weight="8"
+                                />
+                            <EditText
+                                android:id="@+id/signup_Animal_Kind3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="견종"
+                                android:gravity="center"
+                                android:layout_weight="8"
+                                />
+                            <Spinner
+                                android:id="@+id/signup_Animal_Size3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="60dp"
+                                android:layout_weight="2"
+                                android:spinnerMode="dropdown"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="성별"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_weight="8"
+                                />
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:id="@+id/signup_Animal_Sex3"
+                                android:orientation="horizontal"
+                                >
+                                <RadioButton
+                                    android:id="@+id/signup_Animal_M3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="남"/>
+                                <RadioButton
+                                    android:id="@+id/signup_Animal_W3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="여"/>
+                            </RadioGroup>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="나이"
+                                android:gravity="center"
+                                android:layout_weight="8"
+                                />
+                            <EditText
+                                android:id="@+id/signup_Animal_Age3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout><!-- animal3 -->
+            <LinearLayout
+                android:id="@+id/signup_Animal04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/signup_Animal_Image4"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="#FFFFFF"
+                        android:text="+이미지"
+                        android:layout_weight="5"
+                        >
+                    </androidx.appcompat.widget.AppCompatButton>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="5">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="이름"
+                                android:gravity="center"
+                                android:layout_weight="8"
+                                />
+                            <EditText
+                                android:id="@+id/signup_Animal_name4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="견종"
+                                android:gravity="center"
+                                android:layout_weight="8"
+                                />
+                            <EditText
+                                android:id="@+id/signup_Animal_Kind4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="견종"
+                                android:gravity="center"
+                                android:layout_weight="8"
+                                />
+                            <Spinner
+                                android:id="@+id/signup_Animal_Size4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="60dp"
+                                android:layout_weight="2"
+                                android:spinnerMode="dropdown"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="성별"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_weight="8"
+                                />
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:id="@+id/signup_Animal_Sex4"
+                                android:orientation="horizontal"
+                                >
+                                <RadioButton
+                                    android:id="@+id/signup_Animal_M4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="남"/>
+                                <RadioButton
+                                    android:id="@+id/signup_Animal_W4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="여"/>
+                            </RadioGroup>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="나이"
+                                android:gravity="center"
+                                android:layout_weight="8"
+                                />
+                            <EditText
+                                android:id="@+id/signup_Animal_Age4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout><!-- amimal4 -->
+            <LinearLayout
+                android:id="@+id/signup_Animal05"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/signup_Animal_Image5"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="#FFFFFF"
+                        android:text="+이미지"
+                        android:layout_weight="5"
+                        >
+                    </androidx.appcompat.widget.AppCompatButton>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="5">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="이름"
+                                android:gravity="center"
+                                android:layout_weight="8"
+                                />
+                            <EditText
+                                android:id="@+id/signup_Animal_name5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="견종"
+                                android:gravity="center"
+                                android:layout_weight="8"
+                                />
+                            <EditText
+                                android:id="@+id/signup_Animal_Kind5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="견종"
+                                android:gravity="center"
+                                android:layout_weight="8"
+                                />
+                            <Spinner
+                                android:id="@+id/signup_Animal_Size5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="60dp"
+                                android:layout_weight="2"
+                                android:spinnerMode="dropdown"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="성별"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_weight="8"
+                                />
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:id="@+id/signup_Animal_Sex5"
+                                android:orientation="horizontal"
+                                >
+                                <RadioButton
+                                    android:id="@+id/signup_Animal_M5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="남"/>
+                                <RadioButton
+                                    android:id="@+id/signup_Animal_W5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="여"/>
+                            </RadioGroup>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="나이"
+                                android:gravity="center"
+                                android:layout_weight="8"
+                                />
+                            <EditText
+                                android:id="@+id/signup_Animal_Age5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout><!-- amimal5 -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signup_Add_Animal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="+"/>
+        </LinearLayout> <!--animal add frame -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signup_last_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bin_blue"
+            android:layout_gravity="center"
+            android:text="회원가입"/>
+    </LinearLayout> <!--first linearlayout -->
 </ScrollView>
