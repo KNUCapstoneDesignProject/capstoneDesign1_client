@@ -37,9 +37,10 @@ class SignupActivity : AppCompatActivity() {
             else if(animalplus==4){
                 subinding.signupAnimal05.visibility= View.VISIBLE
                 animalplus++
+                subinding.signupAddAnimal.visibility = View.GONE
             }
             else{
-                subinding.signupAddAnimal.visibility = View.INVISIBLE
+                
             }
         }
 
