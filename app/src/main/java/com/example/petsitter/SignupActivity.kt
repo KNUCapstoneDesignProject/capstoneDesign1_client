@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
 import com.example.petsitter.databinding.ActivityLoginBinding
 import com.example.petsitter.databinding.ActivitySignupBinding
 
@@ -40,10 +41,15 @@ class SignupActivity : AppCompatActivity() {
                 subinding.signupAddAnimal.visibility = View.GONE
             }
             else{
-                
+
             }
         }
-
+        //animal size spinner
+        val items: Array<Array<String>> = arrayOf(
+            resources.getStringArray(R.array.Aniaml_Size)
+        )
+        val Adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, items.get(0))
+        subinding.signupAnimalSize.adapter=Adapter
 
 
         //signup_Btn

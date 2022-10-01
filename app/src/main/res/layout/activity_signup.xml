@@ -187,29 +187,11 @@
                             android:gravity="center"
                             android:layout_weight="8"
                             />
-                        <RadioGroup
+                        <Spinner
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
-                            android:id="@+id/signup_Animal_Size"
-                            android:orientation="horizontal"
-                            >
-                            <RadioButton
-                                android:id="@+id/signup_Animal_Sm"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="소"/>
-                            <RadioButton
-                                android:id="@+id/signup_Animal_Mi"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="중"/>
-                            <RadioButton
-                                android:id="@+id/signup_Animal_La"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="대"/>
-                        </RadioGroup>
+                            android:id="@+id/signup_Animal_Size"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
