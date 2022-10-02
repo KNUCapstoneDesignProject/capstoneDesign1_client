@@ -15,9 +15,8 @@ class ReserveActivity : AppCompatActivity() {
     private lateinit var  reserveBinding: ActivityDoReserveBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        reserveBinding= ActivityDoReserveBinding.inflate(layoutInflater)
+        reserveBinding = ActivityDoReserveBinding.inflate(layoutInflater)
         setContentView(reserveBinding.root)
-
         //날짜spinner 구현
         val date_items: Array<Array<String>> = arrayOf(
             resources.getStringArray(R.array.Year),
@@ -31,6 +30,9 @@ class ReserveActivity : AppCompatActivity() {
         reserveBinding.reserveSpinnerYear.adapter=yearAdapter
         reserveBinding.reserveSpinnerMonth.adapter=monthAdapter
         reserveBinding.reserveSpinnerDay.adapter=dayAdapter
+        reserveBinding.reserveSpinnerEndYear.adapter=yearAdapter
+        reserveBinding.reserveSpinnerEndMonth.adapter=monthAdapter
+        reserveBinding.reserveSpinnerEndDay.adapter=dayAdapter
         //시간 spinner 구현
         val time_items: Array<Array<String>> = arrayOf(
             resources.getStringArray(R.array.AmPm),
@@ -43,5 +45,8 @@ class ReserveActivity : AppCompatActivity() {
         reserveBinding.reserveSpinnerAmpm.adapter=amPmAdapter
         reserveBinding.reserveSpinnerHour.adapter=hourAdapter
         reserveBinding.reserveSpinnerMinutes.adapter=minutesAdapter
+        reserveBinding.reserveSpinnerEndAmpm.adapter=amPmAdapter
+        reserveBinding.reserveSpinnerEndHour.adapter=hourAdapter
+        reserveBinding.reserveSpinnerEndMinutes.adapter=minutesAdapter
     }
 }
