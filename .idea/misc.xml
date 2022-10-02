@@ -3,13 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.199" />
         <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/drawable/bin_blue.xml" value="0.197" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/drawable/circle_btn_blue.xml" value="0.199" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/drawable/ic_launcher_background.xml" value="0.199" />
         <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/drawable/stroke.xml" value="0.204" />
         <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/layout/activitt_ing_service.xml" value="0.2234375" />
         <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/layout/activity_do_reserve.xml" value="0.264" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/layout/activity_ing_location.xml" value="0.2390625" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/layout/activity_ing_service.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/layout/activity_ing_video.xml" value="0.2390625" />
         <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/layout/activity_service_terminate.xml" value="0.2390625" />
         <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/layout/activity_signup.xml" value="0.264" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/layout/fragment_login.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/layout/fragment_reserve.xml" value="0.2390625" />
         <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/layout/petsitter_service_list.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/layout/test.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/user/AndroidStudioProjects/petsitter/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
