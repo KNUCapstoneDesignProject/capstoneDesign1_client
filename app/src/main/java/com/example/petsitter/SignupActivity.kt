@@ -1,10 +1,15 @@
 package com.example.petsitter
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
+import androidx.core.widget.addTextChangedListener
 import com.example.petsitter.databinding.ActivityLoginBinding
 import com.example.petsitter.databinding.ActivitySignupBinding
 
@@ -17,7 +22,7 @@ class SignupActivity : AppCompatActivity() {
         var animalplus=1
         //check Id
 
-        //passward check
+
 
         //
 
@@ -54,6 +59,14 @@ class SignupActivity : AppCompatActivity() {
 
         //signup_Btn
         subinding.signupLastBtn.setOnClickListener {
+            //passward check(회원가입버튼 클릭 시)
+            if(!validatePassword()){
+                Log.d("password","unvalid")
+                return@setOnClickListener
+            }
+            else{
+                Log.d("password","valid")
+            }
             //Post:: Allinfo
             {}
             // fail -> convert red message in failed place
@@ -65,5 +78,15 @@ class SignupActivity : AppCompatActivity() {
 
 
     }
+    private fun validatePassword(): Boolean {
+        val checkPassword: String = subinding.signupPasswordOverlapParent.editText?.text.toString()
+        val Password: String = subinding.signupPassword.text.toString()
 
+        return if (checkPassword.equals(Password)==false) {
+            subinding.signupPasswordOverlapParent.error = "비밀번호가 같지 않습니다."
+            false
+        } else {
+            true
+        }
+    }
 }

@@ -9,9 +9,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="LOGIN"/>
+        android:text="LOGIN"
+        />
+    <TextView
+        android:id="@+id/login_alert_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그인 실패! 아이디 또는 패스워드를 입력해주세요."
+        android:gravity="center"
+        android:background="@color/login_alert"
+        android:padding="13dp"
+        android:textSize="15dp"
+        android:layout_marginTop="-70dp"/>
 
     <ImageView
+        android:layout_marginTop="100dp"
         android:layout_width="150dp"
         android:layout_height="170dp"
         android:layout_gravity="center"
