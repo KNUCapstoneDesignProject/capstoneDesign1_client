@@ -8,7 +8,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.petsitter.R
-import com.example.petsitter.petsitterList.petsitter
 
 class petsitterRVAdapter (val context: Context, val petsitterList: ArrayList<petsitter>) :
     RecyclerView.Adapter<petsitterRVAdapter.Holder>() {
