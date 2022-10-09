@@ -1,5 +1,6 @@
 package com.example.petsitter
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +10,7 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
+import androidx.appcompat.app.AlertDialog
 import androidx.core.widget.addTextChangedListener
 import com.example.petsitter.databinding.ActivityLoginBinding
 import com.example.petsitter.databinding.ActivitySignupBinding
@@ -65,27 +67,41 @@ class SignupActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             else{
-                Log.d("password","valid")
+                //Log.d("password","valid")
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("회원가입 완료!")
+                    .setPositiveButton("확인",
+                        DialogInterface.OnClickListener { dialog, which ->
+                            Log.d("Alert","positive")
+                            super.onBackPressed()
+                        })
+                // 다이얼로그를 띄워주기
+                builder.create()
+                builder.show()
             }
             //Post:: Allinfo
             {}
             // fail -> convert red message in failed place
             {}
             // success -> main_page
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+
         }
 
-
     }
+    //유효비밀번호 함수
     private fun validatePassword(): Boolean {
         val checkPassword: String = subinding.signupPasswordOverlapParent.editText?.text.toString()
-        val Password: String = subinding.signupPassword.text.toString()
-
-        return if (checkPassword.equals(Password)==false) {
+        val password: String = subinding.signupPassword.text.toString()
+        val passwordPattern ="""(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"""
+        return  if(!password.matches(passwordPattern.toRegex())){
+            subinding.signupPasswordParent.error = "8자이상, 소문자, 대문자, 특수문자를 포함해야 합니다."
+            false
+        }
+        else if (!checkPassword.equals(password)) {
             subinding.signupPasswordOverlapParent.error = "비밀번호가 같지 않습니다."
             false
-        } else {
+        }
+        else{
             true
         }
     }
