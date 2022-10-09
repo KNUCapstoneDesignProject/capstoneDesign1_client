@@ -26,7 +26,7 @@ class ReserveActivity : AppCompatActivity() {
         val yearAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, date_items.get(0))
         val monthAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item,date_items.get(1) )
         val dayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item,date_items.get(2) )
-        
+
         reserveBinding.reserveSpinnerEndYear.adapter=yearAdapter
         reserveBinding.reserveSpinnerEndMonth.adapter=monthAdapter
         reserveBinding.reserveSpinnerEndDay.adapter=dayAdapter
