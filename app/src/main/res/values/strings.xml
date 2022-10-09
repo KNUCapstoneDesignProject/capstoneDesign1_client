@@ -3,5 +3,5 @@
     <string name="main_desc">
         안녕하세요 000 고객님, 이용하실 서비스를 선택해 주세요:)
     </string>
-    <string name="password_txt">펫 선택</string>
+    <string name="petChoice_txt">펫 선택</string>
 </resources>
