@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dddbd6"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="로고" /> <!--로고 -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="OO펫시터에게 예약하기"
+        android:textSize="20dp" /><!--누구에게 예약-->
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/start_date_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="25dp"
+                        android:gravity="center"
+                        android:minHeight="48dp"
+                        android:text="시작날짜 선택"
+                        android:textSize="15dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="YYYY-MM-DD"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="25dp"/>
+                </LinearLayout><!--시작 날짜-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/start_time_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="25dp"
+                        android:gravity="center"
+                        android:minHeight="48dp"
+                        android:text="시작시간 선택"
+                        android:textSize="15dp"/>
+
+                    <Spinner
+                        android:id="@+id/reserve_spinner_ampm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:minHeight="48dp"
+                        android:padding="10dp" />
+
+                    <Spinner
+                        android:id="@+id/reserve_spinner_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:minHeight="48dp"
+                        android:padding="10dp" />
+
+                    <Spinner
+                        android:id="@+id/reserve_spinner_minutes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_weight="1"
+                        android:minHeight="48dp"
+                        android:padding="10dp" />
+                </LinearLayout><!--시작 시간-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/end_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="25dp"
+                        android:gravity="center"
+                        android:minHeight="48dp"
+                        android:text="종료 날짜"
+                        android:textSize="15dp" />
+                    <Spinner
+                        android:id="@+id/reserve_spinner_end_Year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_weight="1"
+                        android:minHeight="48dp"
+                        android:padding="10dp" />
+                    <Spinner
+                        android:id="@+id/reserve_spinner_end_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="25dp"
+                        android:layout_weight="1"
+                        android:minHeight="48dp"
+                        android:padding="10dp" />
+
+                    <Spinner
+                        android:id="@+id/reserve_spinner_end_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_weight="1"
+                        android:minHeight="48dp"
+                        android:padding="10dp" />
+                </LinearLayout><!--끝 날짜-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="25dp"
+                        android:gravity="center"
+                        android:minHeight="48dp"
+                        android:text="종료시간"
+                        android:textSize="15dp" />
+
+                    <Spinner
+                        android:id="@+id/reserve_spinner_end_ampm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:minHeight="48dp"
+                        android:padding="10dp" />
+
+                    <Spinner
+                        android:id="@+id/reserve_spinner_end_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:minHeight="48dp"
+                        android:padding="10dp" />
+
+                    <Spinner
+                        android:id="@+id/reserve_spinner_end_minutes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_weight="1"
+                        android:minHeight="48dp"
+                        android:padding="10dp" />
+                </LinearLayout><!--끝 시간-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/reserve_animal_img01"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:padding="30dp"
+                    android:src="@drawable/puppy" /><!-- 반려동물 이미지-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/reserve_animal_name01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="45dp"
+                        android:text="누렁이" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="50dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/reserve_animal_breed01"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="말티즈" />
+
+                        <TextView
+                            android:id="@+id/reserve_animal_size01"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="소형" />
+                    </LinearLayout> <!-- 종,크기-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="50dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/reserve_animal_age01"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="2살" />
+
+                        <TextView
+                            android:id="@+id/reserve_animal_sex01"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="남" />
+                    </LinearLayout> <!-- 나이, 성별-->
+                </LinearLayout><!--반려동물 상세정보-->
+            </LinearLayout><!--반려동물 정보-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="요청사항" />
+
+                <EditText
+                    android:id="@+id/reserve_request"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:hint="요청사항을 적어주세요"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/reserve_walk_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bin_blue"
+                    android:text="산책O" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/reserve_wash_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bin_blue"
+                    android:text="목욕하기O" />
+            </LinearLayout><!--산책,목욕 유무 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/reserve_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:text="가격 : 0O,OOO원" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bin_blue"
+                    android:text="결제하기" />
+            </LinearLayout><!--가격, 결제 -->
+        </LinearLayout><!--예약하기-->
+    </ScrollView><!--예약하기 스크롤-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:text="하단바" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:text="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:text="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:text="1" />
+    </LinearLayout><!--하단바-->
+</LinearLayout>

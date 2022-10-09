@@ -6,10 +6,9 @@
             <solid android:color="#b0aba1"/>
         </shape>
     </item>
-    <item android:shape ="rectangle">
-        <shape android:shape="rectangle">
+    <item android:shape ="oval">
+        <shape android:shape="oval">
             <solid android:color="#62bbe0"/>
-            <corners android:radius="100dp"/>
         </shape>
     </item>
     <item android:state_enabled="false">
