@@ -1,36 +1,28 @@
 package com.example.petsitter
+
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.Spinner
-import android.widget.TextView
+import android.view.View
+import android.widget.*
+import com.example.petsitter.databinding.ActivityMainBinding
+import org.mindrot.jbcrypt.BCrypt
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
+    // 전역 변수로 바인딩 객체 선언
+    private lateinit var mbinding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
 
-        val input_id: TextView = findViewById(R.id.input_Id)
-        val input_passward: TextView = findViewById(R.id.input_Passward)
-        val login_btn: Button = findViewById(R.id.login_Btn)
-        val signIn_btn: TextView = findViewById(R.id.signup_Btn)
-        // Spinner
-        val animalSizeSpinner = findViewById<Spinner>(R.id.signup_Aniaml_Size)
-        //animalSizeSpinner.adapter=ArrayAdapter.createFromResource(this,R.array.Aniaml_Size,android.R.layout.simple_spinner_item)
-        // val addAnimal =findViewById<>(R.id.Animal02)
+        // 자동 생성된 뷰 바인딩 클래스에서의 inflate라는 메서드를 활용해서
+        // 액티비티에서 사용할 바인딩 클래스의 인스턴스 생성
+        mbinding = ActivityMainBinding.inflate(layoutInflater)
+        // getRoot 메서드로 레이아웃 내부의 최상위 위치 뷰의 인스턴스 활용하여 생성된 뷰를 액티비티에 표현
+        setContentView(mbinding.root)
+        // loginActivity 실행
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
 
-        signIn_btn.setOnClickListener {
-            setContentView(R.layout.activity_signup)
-        }
-
-//        login_btn.setOnClickListener {
-//
-//            //비밀번호 암호화
-//            val passwordHashed = BCrypt.hashpw(input_passward.toString(), BCrypt.gensalt())
-//            //비밀번호 맞는지 확인.
-//            val isValidPassword = BCrypt.checkpw(input_passward.toString(), passwordHashed)
-//            println(passwordHashed)
-//            println(isValidPassword)
-//        }
     }
 }
