@@ -7,7 +7,6 @@ import android.util.Log
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.example.petsitter.databinding.ActivityLoginBinding
-import com.example.petsitter.databinding.ActivityMainBinding
 
 /* 아마 스플래쉬 화면이 될 에정*/
 class LoginActivity : AppCompatActivity() {
@@ -18,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(lbinding.root)
 
 
-        val alertAni:Animation=AnimationUtils.loadAnimation(applicationContext,R.anim.login_alert)
+        val alertAni:Animation=AnimationUtils.loadAnimation(applicationContext,R.anim.top_alert)
         //loginBtn Click!
         lbinding.loginBtn.setOnClickListener {
             //no id||password

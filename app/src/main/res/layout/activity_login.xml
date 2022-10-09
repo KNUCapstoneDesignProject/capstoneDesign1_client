@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:text="로그인 실패! 아이디 또는 패스워드를 입력해주세요."
         android:gravity="center"
-        android:background="@color/login_alert"
+        android:background="@color/top_alert"
         android:padding="13dp"
         android:textSize="15dp"
         android:layout_marginTop="-70dp"/>
@@ -75,7 +75,7 @@
         android:layout_marginTop="15dp"
         android:gravity="center"
         android:text="login"
-        android:background="@drawable/bin_blue"
+        android:background="@drawable/blue_btn"
         />
     <TextView
         android:id="@+id/signup_Btn"

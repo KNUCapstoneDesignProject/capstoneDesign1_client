@@ -8,6 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorGray">#777777</color>
-    <color name="login_alert">#79E79485</color>
+    <color name="top_alert">#79E79485</color>
     <color name="hint_gray">#666666</color>
 </resources>

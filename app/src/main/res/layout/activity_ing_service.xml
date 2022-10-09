@@ -146,7 +146,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bin_blue"
+                    android:background="@drawable/blue_btn"
                     android:text="실시간 위치" />
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -155,7 +155,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bin_blue"
+                    android:background="@drawable/blue_btn"
                     android:text="영상 확인" />
             </LinearLayout><!-- 위치, 영상 버튼 -->
             <androidx.appcompat.widget.AppCompatButton
@@ -165,7 +165,7 @@
                 android:layout_marginLeft="100dp"
                 android:layout_marginRight="100dp"
                 android:layout_weight="1"
-                android:background="@drawable/bin_blue"
+                android:background="@drawable/blue_btn"
                 android:text="이용종료" /> <!-- 이용종료 버튼-->
         </LinearLayout><!--예약하기-->
     </ScrollView><!--예약 상세내역-->

@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         // getRoot 메서드로 레이아웃 내부의 최상위 위치 뷰의 인스턴스 활용하여 생성된 뷰를 액티비티에 표현
         setContentView(mbinding.root)
         // loginActivity 실행
-        val intent = Intent(this, LoginActivity::class.java)
+        val intent = Intent(this, ReserveActivity::class.java)
         startActivity(intent)
 
     }
