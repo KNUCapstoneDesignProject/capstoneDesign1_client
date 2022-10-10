@@ -84,7 +84,10 @@ class SignupActivity : AppCompatActivity() {
             // fail -> convert red message in failed place
             {}
             // success -> main_page
-
+        }
+        //back_btn
+        subinding.signupBackBtn.setOnClickListener {
+            super.onBackPressed()
         }
 
     }

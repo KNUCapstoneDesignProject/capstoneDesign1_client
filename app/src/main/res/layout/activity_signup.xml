@@ -786,12 +786,32 @@
                 android:visibility="visible"
                 android:text="+"/>
         </LinearLayout> <!--animal add frame -->
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/signup_last_btn"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/blue_btn"
-            android:layout_gravity="center"
-            android:text="회원가입"/>
+            android:orientation="horizontal"
+            android:padding="10dp">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signup_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_btn"
+                android:layout_gravity="center"
+                android:text="뒤로가기"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signup_last_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_btn"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="20dp"
+                android:text="회원가입"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
     </LinearLayout> <!--first linearlayout -->
 </ScrollView>
